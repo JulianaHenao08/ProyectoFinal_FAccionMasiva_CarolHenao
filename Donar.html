@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acción Masiva</title>
+
+    <link rel="stylesheet" href="Styles/global.css">
+    <link rel="stylesheet" href="Styles/donar.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Imagenes/logo.png" alt="Logo Acción Masiva">
+            <span class="logo-text">Acción Masiva</span>
+        </div>
+
+        <nav>
+            <a href="Index.html">Inicio</a>
+            <a href="ComoAyudar.html">Cómo ayudar</a>
+            <a href="Donar.html">Donar</a>
+            <a href="Contactos.html">Contacto</a>
+            <a href="MisionVision.html">Misión y Visión</a>
+        </nav>
+    </header>
+
+    <section class="donar">
+        <h2 class="titulo">Haz tu donación</h2>
+        <p id="total">Total recaudado: $0</p>
+
+        <form id="formDonacion">
+
+            <select id="campaña">
+                <option value="">Selecciona campaña</option>
+                <option>Aguinaldo Navideño</option>
+                <option>Mercados Solidarios</option>
+                <option>Donación de ropa</option>
+            </select>
+
+            <div class="montos">
+                <button type="button" onclick="seleccionarMonto(10000)">$10.000</button>
+                <button type="button" onclick="seleccionarMonto(20000)">$20.000</button>
+                <button type="button" onclick="seleccionarMonto(50000)">$50.000</button>
+            </div>
+
+            <input type="number" id="monto" placeholder="Escribe o selecciona un monto">
+
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="email" id="correo" placeholder="Correo">
+
+            <h3>Método de pago</h3>
+
+            <label><input type="radio" name="pago"> PSE</label>
+            <label><input type="radio" name="pago"> Tarjeta</label>
+            <label><input type="radio" name="pago"> Nequi</label>
+
+            <button type="submit" class="btn">Donar</button>
+        </form>
+
+        <!-- MODAL -->
+        <div id="modal" class="modal">
+
+            <div class="modal-content">
+                <h2>🎉 ¡Gracias por tu donación!</h2>
+                <p id="mensajeModal"></p>
+                <button onclick="cerrarModal()" class="btn">Cerrar</button>
+            </div>
+
+        </div>
+
+        <div id="mensaje" class="mensaje-exito"></div>
+
+    </section>
+    <script src="js/script.js"></script>
+
+    <footer>
+        <p> 2026 Acción Masiva</p>
+        <p> @f.accion_masiva </p>
+    </footer>
+
+</body>
+</html>

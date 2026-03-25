@@ -1,0 +1,127 @@
+/* ================= SECCIÓN VOLUNTARIO ================= */
+
+/* Sección general */
+.voluntario{
+text-align:center; 
+/* Centra todo el contenido */
+}
+
+
+/* Texto introductorio */
+.intro-vol{
+max-width:600px; 
+/* Limita el ancho para mejor lectura */
+
+margin:0 auto 30px auto; 
+/* Centra horizontalmente y da espacio abajo */
+}
+
+
+/* ================= FORMULARIO ================= */
+
+/* Formulario de voluntarios */
+#formVoluntario{
+max-width:400px; 
+/* Ancho máximo */
+
+margin:auto; 
+/* Centra el formulario */
+
+display:flex;
+flex-direction:column; 
+/* Organiza los campos en columna */
+
+gap:15px; 
+/* Espacio entre campos */
+}
+
+
+/* Inputs y select */
+#formVoluntario input,
+#formVoluntario select{
+padding:12px; 
+/* Espacio interno */
+
+border-radius:5px; 
+/* Bordes redondeados */
+
+border:1px solid #ccc; 
+/* Borde suave */
+}
+
+
+/* ================= MENSAJE ================= */
+
+/* Mensaje después de enviar */
+#mensajeVol{
+margin-top:20px;
+font-size:18px;
+
+color:#000000; 
+/* Color negro */
+
+text-align:center; 
+/* Centrado */
+}
+
+
+/* ================= MODAL ================= */
+
+/* ⚠️ OJO: aquí corregimos tu comentario que estaba mal cerrado */
+/* ====== MODAL ====== */
+
+/* Fondo oscuro */
+.modal{
+display:none; 
+/* Oculto por defecto */
+
+position:fixed; 
+/* Se mantiene fijo en pantalla */
+
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.6); 
+/* Fondo oscuro semi-transparente */
+
+justify-content:center;
+align-items:center; 
+/* Centra el contenido */
+}
+
+
+/* Caja blanca del modal */
+.modal-content{
+background:white;
+padding:30px;
+
+border-radius:15px; 
+/* Bordes redondeados */
+
+text-align:center;
+
+width:300px; 
+/* Tamaño del cuadro */
+
+animation:aparecer 0.4s ease; 
+/* Animación al aparecer */
+}
+
+
+/* ================= ANIMACIÓN ================= */
+
+/* Animación del modal */
+@keyframes aparecer{
+from{
+opacity:0;
+transform:scale(0.8); 
+/* Empieza pequeño */
+}
+to{
+opacity:1;
+transform:scale(1); 
+/* Termina tamaño normal */
+}
+}

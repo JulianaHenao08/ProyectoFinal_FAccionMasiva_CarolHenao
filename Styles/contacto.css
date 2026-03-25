@@ -1,0 +1,93 @@
+/* Sección de contacto */
+.contacto{
+text-align:center;
+/* Centra todo el contenido de la sección (títulos, cards, etc.) */
+}
+
+
+/* Texto introductorio */
+.intro-contacto{
+max-width:600px; 
+/* Limita el ancho del texto para mejor lectura */
+
+margin:0 auto 40px auto; 
+/* Centra horizontalmente y agrega espacio abajo */
+}
+
+
+/* Contenedor de las tarjetas */
+.contacto-container{
+display:flex; 
+/* Activa flexbox para organizar las tarjetas */
+
+gap:30px; 
+/* Espacio entre cada tarjeta */
+
+flex-wrap:wrap; 
+/* Permite que bajen en pantallas pequeñas */
+
+justify-content:center; 
+/* Centra las tarjetas horizontalmente */
+}
+
+
+/* Tarjetas de contacto */
+.contacto-card{
+background:white; 
+/* Fondo blanco para resaltar */
+
+padding:25px; 
+/* Espacio interno */
+
+width:250px; 
+/* Ancho fijo */
+
+border-radius:15px; 
+/* Bordes redondeados */
+
+box-shadow:0 10px 25px rgba(0,0,0,0.1); 
+/* Sombra suave para efecto de tarjeta */
+
+transition:0.3s; 
+/* Animación suave */
+}
+
+
+/* Efecto al pasar el mouse */
+.contacto-card:hover{
+transform:translateY(-8px); 
+/* Hace que la tarjeta suba ligeramente */
+}
+
+
+/* Iconos (Instagram, WhatsApp, etc.) */
+.icono-contacto{
+width:60px; 
+height:60px; 
+
+object-fit:contain; 
+/* Ajusta la imagen sin deformarla */
+
+margin-bottom:10px; 
+/* Espacio debajo del icono */
+}
+
+
+/* Links dentro de la tarjeta */
+.contacto-card a{
+text-decoration:none; 
+/* Quita el subrayado */
+
+color:var(--negro); 
+/* Color negro */
+
+font-weight:bold; 
+/* Texto en negrita */
+}
+
+
+/* Efecto hover en los links */
+.contacto-card a:hover{
+color:var(--naranja); 
+/* Cambia a naranja al pasar el mouse */
+}

@@ -1,0 +1,293 @@
+/* Reset básico: elimina márgenes y padding por defecto del navegador
+y asegura que el tamaño de los elementos incluya padding y borde */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif; /* Fuente general de toda la página */
+}
+
+/* ================= PALETA DE COLORES ================= */
+
+/* Aquí se definen variables CSS para reutilizar colores en toda la página.
+Esto facilita cambiar colores después sin modificar todo el código */
+:root{
+--naranja:#ff7a00;   /* Color principal de la página */
+--negro:#111;        /* Color oscuro para header y footer */
+--blanco:#ffffff;    /* Color base de fondo */
+--gris:#f5f5f5;      /* Color de fondo para secciones suaves */
+}
+
+/* Estilo general del body */
+body{
+background:var(--blanco); /* Fondo blanco */
+color:var(--negro);       /* Texto principal negro */
+}
+
+/* ================= HEADER (MENÚ SUPERIOR) ================= */
+
+/* Contenedor del menú de navegación */
+header{
+
+/* Contenedor del logo y texto */
+.logo-container{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-container img{
+width:60px;
+height:60px;
+border-radius:50%;
+object-fit:cover;
+}
+
+/* Texto del logo */
+.logo-text{
+color:var(--naranja);
+font-size:22px;
+font-weight:bold;
+}
+
+background:var(--negro); /* Fondo negro */
+color:white;             /* Texto blanco */
+padding:15px 8%;         /* Espacio interno */
+display:flex;            /* Activa flexbox */
+justify-content:space-between; /* Logo a la izquierda, menú a la derecha */
+align-items:center;      /* Centra verticalmente */
+}
+
+
+
+/* Estilo de los links del menú */
+nav a{
+color:white;              /* Texto blanco */
+text-decoration:none;     /* Quita el subrayado */
+margin-left:20px;         /* Espacio entre enlaces */
+font-weight:bold;         /* Texto en negrita */
+transition:0.3s;          /* Animación suave cuando cambia color */
+}
+
+/* Efecto cuando el mouse pasa por encima */
+nav a:hover{
+color:var(--naranja); /* Cambia a naranja */
+}
+
+/* ================= HERO (SECCIÓN PRINCIPAL) ================= */
+
+/* Sección grande inicial con imagen de fondo */
+.hero{
+min-height:80vh;; /* Ocupa el 80% del alto de la pantalla */
+
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("../Imagenes/f.accion_masiva_2.jpg");
+/* Gradiente oscuro encima de la imagen para que el texto se vea mejor */
+
+background-size:cover;      /* La imagen cubre toda el área */
+background-position:center; /* Centra la imagen */
+
+display:flex;
+align-items:center;         /* Centra verticalmente el contenido */
+justify-content:center;     /* Centra horizontalmente */
+text-align:center;          /* Centra el texto */
+
+color:white;                /* Texto blanco */
+padding:20px;               /* Espacio interno */
+}
+
+/* Título principal del hero */
+.hero h2{
+font-size:48px;   /* Tamaño grande */
+margin-bottom:20px; /* Espacio debajo */
+}
+
+/* Texto descriptivo */
+.hero p{
+font-size:20px;
+max-width:700px; /* Limita ancho para mejor lectura */
+margin:auto;     /* Centra el texto */
+}
+
+/* ================= BOTONES ================= */
+
+/* Clase general para botones */
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;         /* Tamaño del botón */
+background:var(--naranja); /* Color principal */
+border:none;               /* Sin borde */
+color:white;               /* Texto blanco */
+font-size:16px;
+cursor:pointer;            /* Cambia el cursor al pasar */
+border-radius:5px;         /* Bordes redondeados */
+}
+
+/* ================= SECCIONES ================= */
+
+/* Espaciado general de todas las secciones */
+section{
+padding:70px 10%; /* Espacio arriba/abajo y laterales */
+}
+
+/* Títulos de cada sección */
+.titulo{
+text-align:center;   /* Centrado */
+font-size:35px;      /* Tamaño grande */
+margin-bottom:40px; /* Espacio debajo */
+}
+
+/* ================= CARDS (TARJETAS) ================= */
+
+/* Contenedor de las tarjetas */
+.cards{
+display:flex;
+gap:30px;          /* Espacio entre tarjetas */
+flex-wrap:wrap;    /* Permite que bajen en pantallas pequeñas */
+justify-content:center; /* Centra las tarjetas */
+}
+
+/* Estilo individual de cada card */
+.card{
+background:white;
+box-shadow:0 5px 15px rgba(0,0,0,0.1); /* Sombra suave */
+padding:25px;
+width:280px;
+border-radius:10px; /* Bordes redondeados */
+text-align:center;
+}
+
+/* Espacio debajo del título de la card */
+.card h3{
+margin-bottom:10px;
+}
+
+/* ================= BARRA DE PROGRESO ================= */
+
+/* Fondo de la barra */
+.progress{
+background:#ddd;     /* Gris claro */
+height:10px;         /* Altura de la barra */
+border-radius:10px;
+margin-top:15px;
+}
+
+/* Barra que representa el progreso */
+.progress-bar{
+height:10px;
+background:var(--naranja); /* Color de progreso */
+width:60%; /* Porcentaje de progreso */
+border-radius:10px;
+}
+
+/* Diferentes porcentajes de progreso */
+.progreso2{
+width:40%;
+}
+
+.progreso3{
+width:75%;
+}
+
+/* ================= SECCIÓN AYUDA ================= */
+
+/* Contenedor de las opciones para ayudar */
+.ayuda{
+display:flex;
+gap:40px;
+flex-wrap:wrap; /* Para que se adapte a móviles */
+justify-content:center;
+}
+
+/* Cada bloque de ayuda */
+.ayuda-item{
+width:250px;
+text-align:center;
+}
+
+/* ================= SECCIÓN DONAR ================= */
+
+/* Fondo gris claro para diferenciar la sección */
+.donar{
+background:var(--gris);
+text-align:center;
+}
+
+/* Estilo del formulario */
+form{
+max-width:400px;
+margin:auto;
+display:flex;
+flex-direction:column; /* Elementos uno debajo de otro */
+gap:15px;              /* Espacio entre campos */
+}
+
+/* Campos de entrada */
+input, select{
+padding:12px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+
+/* GALERÍA */
+.galeria{
+padding:70px 10%;
+text-align:center;
+}
+
+.kodfun-galeri{
+display:flex;
+height:20rem;
+gap:1rem;
+}
+
+.kodfun-galeri> div{
+flex:1;
+border-radius:1rem;
+background-position:center;
+background-repeat:no-repeat;
+background-size:auto 100%;
+transition: all .8s cubic-bezier(.25, .4,.45,1.4);
+}
+
+.kodfun-galeri>div:hover{
+flex:5;
+}
+
+.descripcion-empresa{
+font-size:25px;
+line-height:1.6;
+color:#333;
+margin-bottom:30px;
+}
+
+/* Botón flotante Instagram */
+.ig-float{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:white;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+z-index:1000;
+transition:0.3s;
+}
+
+/* Imagen dentro */
+.ig-float img{
+width:35px;
+height:35px;
+object-fit:contain;
+}
+
+/* Efecto hover */
+.ig-float:hover{
+transform:scale(1.1);
+}

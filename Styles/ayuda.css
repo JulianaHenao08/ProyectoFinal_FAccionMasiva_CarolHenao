@@ -1,0 +1,80 @@
+/* Sección general "Cómo ayudar" */
+.como-ayudar{
+background:var(--gris); 
+/* Fondo gris claro para diferenciar esta sección del resto de la página */
+}
+
+
+/* Contenedor de todas las tarjetas */
+.ayuda-container{
+display:flex; 
+/* Activa flexbox para organizar las tarjetas en fila */
+
+gap:30px; 
+/* Espacio entre cada tarjeta */
+
+flex-wrap:wrap; 
+/* Permite que bajen a otra línea en pantallas pequeñas */
+
+justify-content:center; 
+/* Centra las tarjetas horizontalmente */
+}
+
+
+/* Estilo de cada tarjeta */
+.ayuda-card{
+background:white; 
+/* Fondo blanco para resaltar sobre el gris */
+
+padding:30px; 
+/* Espacio interno */
+
+width:280px; 
+/* Ancho fijo de cada tarjeta */
+
+border-radius:15px; 
+/* Bordes redondeados */
+
+text-align:center; 
+/* Centra el contenido (texto, iconos) */
+
+box-shadow:0 10px 25px rgba(0,0,0,0.1); 
+/* Sombra suave para efecto de tarjeta elevada */
+
+transition:0.3s; 
+/* Animación suave para efectos como hover */
+}
+
+
+/* Efecto al pasar el mouse */
+.ayuda-card:hover{
+transform:translateY(-10px); 
+/* Hace que la tarjeta suba un poco → efecto moderno */
+}
+
+
+/* Iconos (emoji o imagen) */
+.icono{
+font-size:40px; 
+/* Tamaño grande para destacar */
+
+margin-bottom:15px; 
+/* Espacio debajo del icono */
+}
+
+
+/* Títulos dentro de las tarjetas */
+.ayuda-card h3{
+margin-bottom:10px; 
+/* Espacio entre el título y el texto */
+}
+
+
+/* Texto descriptivo */
+.ayuda-card p{
+font-size:14px; 
+/* Tamaño un poco más pequeño para descripción */
+
+margin-bottom:15px; 
+/* Espacio antes del botón */
+}

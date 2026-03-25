@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acción Masiva</title>
+
+    <link rel="stylesheet" href="Styles/global.css">
+    <link rel="stylesheet" href="Styles/voluntario.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="Imagenes/logo.png" alt="Logo Acción Masiva">
+            <span class="logo-text">Acción Masiva</span>
+        </div>
+
+        <nav>
+            <a href="Index.html">Inicio</a>
+            <a href="ComoAyudar.html">Cómo ayudar</a>
+            <a href="Donar.html">Donar</a>
+            <a href="Contactos.html">Contacto</a>
+            <a href="MisionVision.html">Misión y Visión</a>
+        </nav>
+
+    </header>
+    <section class="voluntario">
+
+        <h2 class="titulo">Únete como voluntario</h2>
+
+        <p class="intro-vol">
+            Sé parte del cambio apoyando nuestras actividades en las veredas.
+        </p>
+
+        <form id="formVoluntario">
+
+            <input type="text" id="nombreVol" placeholder="Nombre completo" required>
+            <input type="email" id="correoVol" placeholder="Correo electrónico" required>
+            <input type="text" placeholder="Teléfono">
+
+            <select id="area">
+                <option value="">¿Cómo quieres ayudar?</option>
+                <option>Recolección</option>
+                <option>Logística</option>
+                <option>Entrega de ayudas</option>
+            </select>
+
+            <button type="submit" class="btn">Registrarme</button>
+
+        </form>
+        <div id="modalVol" class="modal">
+            <div class="modal-content">
+                <h2>¡Registro exitoso!</h2>
+                <p id="mensajeVolModal"></p>
+                <button onclick="cerrarModalVol()" class="btn">Cerrar</button>
+            </div>
+        </div>
+        <p id="mensajeVol"></p>
+
+    </section>
+
+    <script src="js/voluntario.js"></script>
+    <footer>
+        <p> 2026 Acción Masiva</p>
+        <p> @f.accion_masiva </p>
+    </footer>
+
+</body>
+
+</html>

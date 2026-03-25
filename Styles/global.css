@@ -1,0 +1,217 @@
+/* ================= RESET ================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+/* Hace que el tamaño incluya padding y borde → más fácil de controlar */
+
+font-family: Arial, Helvetica, sans-serif;
+/* Fuente general de toda la página */
+}
+
+
+/* ================= PALETA ================= */
+:root{
+--naranja:#ff7a00; 
+/* Color principal (identidad visual) */
+
+--negro:#111; 
+/* Para header, footer y texto fuerte */
+
+--blanco:#ffffff; 
+/* Fondo principal */
+
+--gris:#f5f5f5; 
+/* Fondo de secciones suaves */
+}
+
+
+/* ================= BODY ================= */
+body{
+background:var(--blanco); 
+/* Fondo blanco */
+
+color:var(--negro); 
+/* Texto principal */
+}
+
+
+/* ================= HEADER ================= */
+header{
+background:var(--negro); 
+/* Fondo oscuro */
+
+color:white; 
+/* Texto blanco */
+
+padding:15px 8%; 
+/* Espacio interno */
+
+display:flex; 
+/* Flexbox para organizar */
+
+justify-content:space-between; 
+/* Logo a la izquierda, menú a la derecha */
+
+align-items:center; 
+/* Centra verticalmente */
+}
+
+
+/* ================= LOGO ================= */
+.logo-container{
+display:flex; 
+/* Logo + texto en fila */
+
+align-items:center; 
+/* Centrado vertical */
+
+gap:10px; 
+/* Espacio entre imagen y texto */
+}
+
+.logo-container img{
+width:60px;
+height:60px;
+
+border-radius:50%; 
+/* Hace el logo redondo */
+
+object-fit:cover; 
+/* Evita que la imagen se deforme */
+}
+
+.logo-text{
+color:var(--naranja); 
+/* Color llamativo */
+
+font-size:22px;
+font-weight:bold;
+}
+
+
+/* ================= NAV ================= */
+nav a{
+color:white; 
+/* Texto blanco */
+
+text-decoration:none; 
+/* Quita subrayado */
+
+margin-left:20px; 
+/* Espacio entre enlaces */
+
+font-weight:bold;
+
+transition:0.3s; 
+/* Animación suave */
+}
+
+nav a:hover{
+color:var(--naranja); 
+/* Cambio de color al pasar el mouse */
+}
+
+
+/* ================= BOTONES ================= */
+.btn{
+display:inline-block;
+/* Permite que links se comporten como botones */
+
+margin-top:20px;
+
+padding:12px 25px;
+
+background:var(--naranja); 
+/* Color principal */
+
+border:none;
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer; 
+/* Cursor tipo botón */
+
+border-radius:5px;
+
+text-decoration:none; 
+/* Quita subrayado en links */
+}
+
+
+/* ================= SECCIONES ================= */
+section{
+padding:70px 10%; 
+/* Espaciado general de todas las secciones */
+}
+
+.titulo{
+text-align:center; 
+/* Centra títulos */
+
+font-size:35px;
+
+margin-bottom:40px; 
+/* Espacio debajo */
+}
+
+
+/* ================= FORMULARIOS ================= */
+form{
+max-width:400px; 
+/* Limita ancho */
+
+margin:auto; 
+/* Centra el formulario */
+
+display:flex;
+flex-direction:column; 
+/* Elementos en columna */
+
+gap:15px; 
+/* Espacio entre campos */
+}
+
+input, select{
+padding:12px;
+
+border:1px solid #ccc;
+
+border-radius:5px; 
+/* Bordes redondeados */
+}
+
+
+/* ================= FOOTER ================= */
+footer{
+background:var(--negro);
+
+color:white;
+
+text-align:center;
+
+padding:25px;
+
+margin-top:40px;
+}
+
+
+/* ================= LAYOUT (IMPORTANTE) ================= */
+
+/* Hace que la página ocupe toda la altura */
+html, body{
+height:100%;
+}
+
+/* Permite organizar header, contenido y footer */
+body{
+display:flex;
+flex-direction:column;
+}
+
+/* Hace que el contenido crezca y empuje el footer abajo */
+main{
+flex:1;
+}
